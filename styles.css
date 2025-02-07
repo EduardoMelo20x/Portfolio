@@ -1,0 +1,47 @@
+body{
+
+    margin: 0; /*Remove todas as margens*/
+    padding: 0; /*Remove qualquer preenchimento interno de um elemento*/
+    font-family: 'Gill Sans', 'Gill Sans', sans-serif; /*Define a fonte principal e a generica caso o navegador nao encontre a primeira opção*/
+    font-size: 1rem; /*Define o tamanho da fonte para 1rem (tamanho padrão definido no navegador)*/
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+.sidebar{
+
+    width: 20%; /* Ajusta a largura */
+    min-width: 200px; /* Define um tamanho mínimo para telas menores */
+    height: 100vh;
+    background-color: #161515;
+    color: white;
+    padding: 2rem; /* Espaçamento interno */
+    position: fixed;
+}
+
+.sidebar .profile{
+
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+.sidebar .profile img {
+
+    width: 100px; /* Tamanho adaptável para telas menores */
+    height: auto;
+    border-radius: 50%; /* Imagem redonda */
+    border: 2px solid rgb(255, 255, 255); /* Adiciona uma borda vermelha para verificar a referência */
+
+}
+
+
+.sidebar .profile .nome-perfil{
+
+    font-size: 30px;
+
+} 
+
+
+
