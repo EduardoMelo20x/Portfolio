@@ -3,7 +3,7 @@ body{
     padding: 0; /*Remove qualquer preenchimento interno de um elemento*/
     font-family: 'Gill Sans', 'Gill Sans', sans-serif; /*Define a fonte principal e a generica caso o navegador nao encontre a primeira opção*/
     font-size: 1rem; /*Define o tamanho da fonte para 1rem (tamanho padrão definido no navegador)*/
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 
