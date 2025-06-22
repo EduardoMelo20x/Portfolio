@@ -1,37 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     margin: 0; /*Remove todas as margens*/
     padding: 0; /*Remove qualquer preenchimento interno de um elemento*/
-    font-family: 'Gill Sans', 'Gill Sans', sans-serif; /*Define a fonte principal e a generica caso o navegador nao encontre a primeira opção*/
-    font-size: 1rem; /*Define o tamanho da fonte para 1rem (tamanho padrão definido no navegador)*/
-    background-color: rgb(0, 0, 0);
-}
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif; /*Define a fonte principal e a generica caso o navegador nao encontre a primeira opção*/
+    font-size: 1rem; /*Define o tamanho da fonte para 1rem = 16px (tamanho padrão definido no navegador)*/
+    background-color: rgb(0, 0, 0); /* Define o fundo da pagina*/
+    color: white;
+    overflow-x: hidden;
+} 
 
+.container {
+    display: flex;
+    min-height: 100vh;
+}
 
 .sidebar{
     width: 10%; /* Ajusta a largura */
     min-width: 200px; /* Define um tamanho mínimo para telas menores */
-    height: 100vh;
-    background-color: #161515;
-    color: white;
+    height: 100vh; /*Altura de 100% da altura do viewport (vh = viewport height)*/
+    background-color: #161515; /*Cor de Fundo*/
+    color: white; /*Define a cor do texto*/
     padding: 2rem; /* Espaçamento interno */
-    position: fixed;
+    position: fixed;/*Deixa a sidebar fixa na tela*/
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 100;
+    transition: transform 0.3s ease;
 }
 
-.sidebar .profile{
-    text-align: center;
-    margin-bottom: 3rem;
+.sidebar .profile{/* Seletor para a div de perfil dentro da sidebar*/
+    text-align: center;/*Centraliza o conteudo*/
+    margin-bottom: 2.5rem;/* Adiciona espaço abaixo do perfil*/
 }
 
-.sidebar .profile img {
-    width: 100px; /* Tamanho adaptável para telas menores */
-    height: auto;
+.sidebar .profile img {/*Seletor para a imagem de perfil*/
+    width: 120px; /* Tamanho adaptável para telas menores */
+    height: 120PX;
     border-radius: 50%; /* Imagem redonda */
     border: 2px solid rgb(255, 255, 255); /* Adiciona uma borda */
+    object-fit: cover;
 }
 
 
 .sidebar .profile .nome-perfil{
-    font-size: 30px;
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+    font-weight: 500;
 } 
 
 
@@ -42,17 +62,158 @@ body{
     text-align: center;
 }
 
-.sidebar a{
-    font-size: 110%;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-}
-
 .sidebar nav ul li {
-    margin: 30% 0; /* Espaçamento entre os itens */
+    margin: 1.2rem 0; /* Espaçamento entre os itens */
 }
 
-.sidebar nav ul li a:hover {
+.sidebar a{
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 0.3rem 0;
+    
+}
+
+
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
     color: #9400D3; /* Muda a cor ao passar o mouse */
+}
+
+.sidebar nav ul li a.active {
+    position: relative;
+}
+
+.sidebar nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background-color: #e74c3c;
+}
+
+.botao-contato {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.link-whats {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.link-whats:hover {
+    background-color: #c0392b;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.redes-sociais a {
+    font-size: 1.2rem;
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #e74c3c;
+}
+
+.content {
+    flex: 1;
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 2rem;
+    display: none;
+    position: relative;
+}
+
+.section.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seção Hero/Início */
+#inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://github.com/EduardoMelo20x/Portfolio/blob/main/imagens/Fundo%20Site.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Mais estilos para o conteúdo principal... */
+
+/* Media queries para responsividade */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 220px;
+    }
+    
+    .content {
+        margin-left: 220px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Tablets menores e smartphones grandes */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .sidebar {
+        transform: translateX(-100%);
+        width: 250px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .content {
+        margin-left: 0;
+    }
+    
+    /* Mais ajustes responsivos... */
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    /* Ajustes para telas muito pequenas... */
 }

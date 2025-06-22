@@ -1,55 +1,111 @@
-<!DOCTYPE html>
-<html lang="pt-br"> <!-- Linguagem da Pagina em Portugues BR-->
+<!DOCTYPE html> <!--Diz ao navegador que esse site é HTML5-->
+<html lang="pt-br"> <!--Linguagem da Pagina em Portugues BR-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Eduardo Melo</title>
+    <meta charset="UTF-8"> <!--Define a codificação de caracteres como UTF-8, que suporta caracteres especiais e acentos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Configura a visualização responsiva para dispositivos moveis-->
+    <link rel="short icon" href="https://github.com/EduardoMelo20x/Portfolio/blob/main/imagens/favicon.ico" type="image\x-icon"> <!--Define o Icone da pagina-->
+    <title>Portfolio - Eduardo Melo</title> <!--Titulo da Pagina-->
     <link rel="stylesheet" type="text/css" href="styles.css"><!-- Link para o CSS -->
-    <link rel="shortcut icon" href="https://github.com/EduardoMelo20x/Portfolio/blob/main/imagens/favicon.ico
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!--Esta importando a biblioteca Font Awesome para usar icones das redes-->
     
 </head>
 
 <body>
    
-    <div class="sidebar">
-       
-        <div class="profile">
-            
-            <img src="https://github.com/EduardoMelo20x/Portfolio/blob/main/imagens/foto%20de%20perfil.jpg?raw=true" alt="Eduardo Melo">
-            <h2 class="nome-perfil">Eduardo Melo</h2>
+    <div clas="menu-toggle"> <!--Botão do menu hamburguer para mobile-->
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="conteiner"> <!--Conteiner Principal-->
+
+        <div class="sidebar"> <!-- Conteudo da Sidebar-->
+        
+            <div class="profile">
+                
+                <img src="https://github.com/EduardoMelo20x/Portfolio/blob/main/imagens/foto%20de%20perfil.jpg?raw=true" alt="Eduardo Melo"> <!--Imagem da sidebar ("Eduardo Melo" é o texto alternativo)-->
+                <h2 class="nome-perfil">Eduardo Melo</h2> <!--Nome que ficara embaixo da foto-->
+
+            </div>
+
+            <div class="lista-atalhos"> <!--Menu de navegação-->
+
+                <nav>
+                    <ul>
+                        <li><a href="#inicio" class="active">Inicio</a></li> <!--Classe active para destacar o link do menu-->
+                        <li><a href="#sobre-mim">Sobre Mim</a></li>
+                        <li><a href="#resumo">Resumo</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="botao-contato"> <!--Botão de contato do Whats-->
+
+                <a href="https://api.whatsapp.com/send?phone=5541998513653" target="_blank" class="link-whats">Enviar Via WhatsApp</a> <!--Link do Whats-->
+
+            </div>
+
+            <div class="redes-sociais"> <!--Minhas Redes-->
+
+                <a href="https://www.linkedin.com/in/eduardo-melo-dos-santos-21816531a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/EduardoMelo20x" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/edu4rdo_melo20s/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            </div>
 
         </div>
 
-        <div class="lista-atalhos">
+        <main class="content"> <!--Conteudo Principal-->
+            <!-- Seção Início -->
+            <section id="inicio" class="section active">
 
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-mim">Sobre Mim</a></li>
-                    <li><a href="#resuno">Resumo</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+                <div class="hero-content">
 
-        </div>
+                    <h3>Bem-vindo</h3>
+                    <h1>Consultor de Software e<br>Desenvolvedor Web</h1>
+                    <a href="#contato" class="btn-contate">Contate-me</a>
 
-        <div class="botao-contato">
+                </div>
 
-            <a href="https://api.whatsapp.com/send?phone=5541998513653" target="_blank" class="link-whats">Enviar Via WhatsApp</a>
+                <a href="#sobre-mim" class="scroll-down">
+        
+                    <i class="fas fa-chevron-down"></i>
 
-        </div>
+                </a>
+            </section>
 
-        <div class="redes-sociais">
+            <!-- Seção Sobre Mim -->
+            <section id="sobre-mim" class="section">
+                <div class="section-content">
+                    <h2>Sobre Mim</h2>
+                    <div class="about-container">
+                        <div class="about-text">
+                            <h3>Eu sou <span class="highlight">Eduardo Melo</span>, um desenvolvedor web</h3>
+                            <p>Coloque aqui sua biografia profissional...</p>
+                            
+                            <div class="info-grid">
+                                <!-- Informações pessoais -->
+                            </div>
+                            
+                            <div class="skills">
+                                <!-- Habilidades -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <a href="https://www.linkedin.com/in/eduardo-melo-dos-santos-21816531a/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/EduardoMelo20x" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/edu4rdo_melo20s/" target="_blank"><i class="fab fa-instagram"></i></a>
-
-        </div>
+        </main>
 
     </div>
+
+    <a href="https://api.whatsapp.com/send?phone=5541998513653" class="whatsapp-float"> <!--WhatsApp Flutuante-->
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
